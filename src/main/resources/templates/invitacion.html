@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Invitación Especial</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; text-align: center;">
+
+<div style="max-width: 600px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: auto;">
+
+    <!-- Logo de Popoya -->
+    <img src="https://res.cloudinary.com/dapfvvlsy/image/upload/v1742268225/logo_popoya_pemlzv.png"
+         alt="Logo Popoya" width="180px" style="margin-bottom: 15px;"/>
+
+    <h2 style="color: #333;">📨 Tienes una invitación especial</h2>
+
+    <p style="font-size: 18px; color: #333; font-weight: bold;">
+        Querido <span th:text="${username}">usuario</span> 👋
+    </p>
+
+    <p style="font-size: 16px; color: #555;">
+        Has sido invitado a participar de nuestro torneo.
+    </p>
+
+    <!-- Logo de la empresa -->
+    <img th:src="${companyLogoUrl}" 
+         src="https://via.placeholder.com/200x100?text=Logo+Empresa" 
+         alt="Logo de la empresa" 
+         style="max-width: 200px; margin: 15px auto; border: 1px solid #eee; padding: 10px;"/>
+
+    <p style="font-size: 16px; color: #555;">
+       Ingresa al registro para partcipar en el torneo
+    </p>
+
+    <!-- Botones con acción (Opción 1: Thymeleaf) -->
+    <div style="margin: 25px 0;">
+        <a th:href="${baseUrl}"
+           style="display: inline-block; background-color: #4CAF50; color: white; padding: 12px 24px; text-decoration: none;
+                  font-size: 16px; font-weight: bold; border-radius: 8px; margin-right: 15px; transition: all 0.3s ease;
+                  cursor: pointer;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+            Ingresar
+        </a>
+        
+    </div>
+
+
+
+    <p style="font-size: 14px; color: #777; margin-top: 20px;">
+        ⌛ Esta invitación tiene un tiempo limitado de validez.
+    </p>
+
+</div>
+
+</body>
+</html>
